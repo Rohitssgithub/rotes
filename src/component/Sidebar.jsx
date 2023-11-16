@@ -4,7 +4,7 @@ import styles from "../../src/pages/MainLayout.module.scss"
 import { sideBarNavigation } from "./SideBarNavigation";
 import { NavLink } from "react-router-dom";
 
-const MainSidebar = ({isOpen,setIsOpen}) => {
+const MainSidebar = ({ isOpen, setIsOpen }) => {
     // const [isOpen, setIsOpen] = useState(false);
     return (
         <nav className={`sidebar ${isOpen ? "open" : ""}`}>
@@ -43,6 +43,7 @@ const MainSidebar = ({isOpen,setIsOpen}) => {
                                         }
                                         to={data.path}
                                         state={{ previousPath: location.pathname }}
+                                        onClick={() => setIsOpen(false)}
                                     >
                                         <div className={styles.linksNames}>
                                             <p className={styles.linkPageName}>{data.pageName}</p>

@@ -10,7 +10,7 @@ const HomeLayout = () => {
   return (
     <div className={styles.layout}>
       <MainSidebar isOpen={isOpen} setIsOpen={setIsOpen} />
-      <div className={`${isOpen ? styles.newLayoutWid : styles.rightSideContainer}`}>
+      <div className={styles.rightSideContainer}>
         <Topbar />
         <div className={styles.outletDiv}>
           <Outlet />
